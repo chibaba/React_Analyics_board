@@ -1,24 +1,29 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import ResponsiveNavigation from './component/ResponsiveNavigation'
 
 function App() {
+  const navLinks = [
+    {
+      text: 'home',
+      path: '/',
+      icon: 'ion-ios-home'
+    },
+    {
+      text: 'home',
+      path: '/analytics',
+      icon: 'ion-ios-analytics'
+    }
+  ]
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ResponsiveNavigation
+        navLinks={navLinks}
+        logo={logo}
+        hoverBackground="ddd"
+        linkColor='#777' />
+
     </div>
   );
 }
