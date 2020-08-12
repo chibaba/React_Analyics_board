@@ -1,0 +1,56 @@
+[{
+        "os_repo_count": 800,
+        "ep_repo_count": 300,
+        "date": "8/18"
+    },
+    {
+        "os_repo_count": 900,
+        "ep_repo_count": 301,
+        "date": "9/18"
+    },
+    {
+        "os_repo_count": 1800,
+        "ep_repo_count": 100,
+        "date": "10/18"
+    },
+    {
+        "os_repo_count": 2000,
+        "ep_repo_count": 200,
+        "date": "11/18"
+    },
+    {
+        "os_repo_count": 1100,
+        "ep_repo_count": 500,
+        "date": "12/18"
+    },
+    {
+        "os_repo_count": 3000,
+        "ep_repo_count": 600,
+        "date": "13/18"
+    },
+    {
+        "os_repo_count": 2800,
+        "ep_repo_count": 500,
+        "date": "14/18"
+    },
+    {
+        "os_repo_count": 2300,
+        "ep_repo_count": 650,
+        "date": "15/18"
+    },
+    {
+        "os_repo_count": 800,
+        "ep_repo_count": 700,
+        "date": "6/18"
+    },
+    {
+        "os_repo_count": 2200,
+        "ep_repo_count": 300,
+        "date": "7/18"
+    },
+    {
+        "os_repo_count": 1800,
+        "ep_repo_count": 300,
+        "date": "4/18"
+    }
+]
