@@ -1,10 +1,12 @@
 import React from "react";
 import { Router } from "@reach/router";
+import axios from "axios";
 import logo from "./logo.svg";
 import "./App.css";
 import ResponsiveNavigation from "./component/ResponsiveNavigation";
 import "./scss/base.scss";
 import Home from "./page/Home";
+import DashboardSelector from "./page/DashBoard-selector";
 
 function App() {
   const navLinks = [
@@ -29,6 +31,7 @@ function App() {
       />
       <Router>
         <Home path="/" />
+        <DashboardSelector path="/analytics" axios={axios} />
       </Router>
     </div>
   );
