@@ -14,7 +14,7 @@ export default function DashBoardSelector({ axios }) {
       {dashboardList &&
         dashboardList.map((dashboard) => (
           <Link to={dashboard.path}>
-            <h3>{DashBoard.title}</h3>
+            <h3>{dashboard.title}</h3>
             <p>{dashboard.description}</p>
           </Link>
         ))}

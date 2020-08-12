@@ -5,7 +5,7 @@ import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 
 if (process.env.NODE_ENV === "development") {
-  require("./assts/mock-endpoints/mocks");
+  require("./mock-endPoints/mocks");
 }
 
 ReactDOM.render(
