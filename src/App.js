@@ -1,24 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Router } from "@reach/router";
+import axios from "axios";
+import logo from "./logo.svg";
+import "./App.css";
+import ResponsiveNavigation from "./component/ResponsiveNavigation";
+import "./scss/base.scss";
+import Home from "./page/Home";
+import DashboardSelector from "./page/DashBoard-selector";
 
 function App() {
+  const navLinks = [
+    {
+      text: "home",
+      path: "/",
+      icon: "ion-ios-home",
+    },
+    {
+      text: "analytics",
+      path: "/analytics",
+      icon: "ion-ios-analytics",
+    },
+  ];
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ResponsiveNavigation
+        navLinks={navLinks}
+        logo={logo}
+        hoverBackground="ddd"
+        linkColor="#777"
+      />
+      <Router>
+        <Home path="/" />
+        <DashboardSelector path="/analytics" axios={axios} />
+      </Router>
     </div>
   );
 }
