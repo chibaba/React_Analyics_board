@@ -7,6 +7,7 @@ import ResponsiveNavigation from "./component/ResponsiveNavigation";
 import "./scss/base.scss";
 import Home from "./page/Home";
 import DashboardSelector from "./page/DashBoard-selector";
+import Dashboard from "./page/DashBoard";
 
 function App() {
   const navLinks = [
@@ -32,6 +33,7 @@ function App() {
       <Router>
         <Home path="/" />
         <DashboardSelector path="/analytics" axios={axios} />
+        <Dashboard path="/analytics/:dashboard" axios={axios} />
       </Router>
     </div>
   );
