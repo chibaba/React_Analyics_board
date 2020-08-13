@@ -21,4 +21,18 @@ const mutation = {
       config,
     };
   },
+  SET_DASHBOARD_LIST: (state, dashboardList) => {
+    return {
+      ...state,
+      dashboardList,
+    };
+  },
 };
+
+const DashboardReducer = (state = initialState, { type, payload }) => {
+  if (mutation[type]) {
+    return mutation[type](state, payload);
+  }
+  return { ...state };
+};
+export default DashboardReducer;
