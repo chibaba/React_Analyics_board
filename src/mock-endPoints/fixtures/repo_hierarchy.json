@@ -24,7 +24,13 @@
             },
             {
                 "name": "optimization",
-                "children": []
+                "children": [
+
+                    { "name": "LinkDistance", "value": 5731 },
+                    { "name": "MaxFlowMinCut", "value": 7840 },
+                    { "name": "ShortestPaths", "value": 5914 },
+                    { "name": "SpanningTree", "value": 3416 }
+                ]
             }
         ]
     }]
