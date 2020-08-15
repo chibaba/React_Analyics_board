@@ -1,5 +1,5 @@
 const initialState = {
-  config: [],
+  config: undefined,
   dashboard: [],
 };
 

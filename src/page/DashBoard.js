@@ -30,6 +30,11 @@ export default function Dashboard({ axios, dashboardName }) {
   }, []);
 
   return (
-    <div>{JSON.stringify(config)}</div>
+    <section className="dashboard">{
+      config && config.map((config, index) => {
+        const component = require(`../component/${config.type}.js`).default;
+        return config.data ? React.createElement(component, { config: config, key: index }) : ''
+      })
+    }</section>
   )
 }
