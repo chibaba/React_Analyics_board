@@ -32,10 +32,10 @@ export default function Dashboard({ axios, dashboardName }) {
 
   return (
     <section className="dashboard">{
-      config && config.map((config, index) => {
-        const component = require(`../component/${config.type}.js`).default;
-        return (<Chart config={config}> {
-          config.data ? React.createElement(component, { config: config, key: index }) : ''
+      config && config.map((settings, index) => {
+        const component = require(`../component/${settings.type}.js`).default;
+        return (<Chart config={settings}> {
+          settings.data ? React.createElement(component, { config: settings, key: index }) : ''
         }
         </Chart>)
       })
