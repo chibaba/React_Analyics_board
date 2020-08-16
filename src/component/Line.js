@@ -16,14 +16,14 @@ export default function Line({ config }) {
                 }
             }
         },
-        legend: {
-            data: ['邮件营销', '联盟广告', '视频广告', '直接访问', '搜索引擎']
-        },
-        toolbox: {
-            feature: {
-                saveAsImage: {}
-            }
-        },
+        // legend: {
+        //     data: config.data.map()
+        // },
+        // toolbox: {
+        //     feature: {
+        //         saveAsImage: {}
+        //     }
+        // },
         grid: {
             left: '3%',
             right: '4%',
@@ -86,5 +86,8 @@ export default function Line({ config }) {
             }
         ]
     };
-    return <EChart config={option} />
+    return <>
+        {JSON.stringify(config)}
+        <EChart config={option} />
+    </>
 }
