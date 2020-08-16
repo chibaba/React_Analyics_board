@@ -1,9 +1,27 @@
 import React, { useState, useEffect, useRef } from 'react'
 
-import echart from 'echarts'
+import echarts from 'echarts'
 
-export default ({ option, resize }) => {
-    let chart = useRef(null)
+export default function Echart({ config, resize }) {
+    const chart = useRef(null)
 
-    let [chartEl, setChartEl] = useState(chart)
+    const [chartElement, setChartElement] = useState(chart)
+
+    useEffect(() => {
+        console.log(chartElement.current)
+        if (resize) {
+            chartElement.resize()
+        }
+        if (!chartElement.current) {
+            chartElement.setOption(config)
+        }
+        else {
+            // console.log(resize chart)
+            setChartElement(echarts.init(chart.current))
+        }
+
+    }, [config, chartElement, resize])
+    return (
+        <div ref={chart} style={{ height: '300px', width: '900px' }} />
+    )
 }
