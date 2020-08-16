@@ -1,10 +1,10 @@
 const initialState = {
-  config: [],
+  config: undefined,
   dashboard: [],
 };
 
-const mutation = {
-  SET_DATA: (state, [index, data]) => {
+const mutations = {
+  'SET_DATA': (state, [index, data]) => {
     return {
       ...state,
       config: state.config.map((conf, ind) => {
@@ -12,26 +12,27 @@ const mutation = {
           conf["data"] = data;
         }
         return conf;
-      }),
+      })
     };
   },
-  SET_CONFIG: (state, config) => {
+  'SET_CONFIG': (state, config) => {
     return {
       ...state,
-      config,
-    };
+      config
+    }
   },
-  SET_DASHBOARD_LIST: (state, dashboardList) => {
-    return {
-      ...state,
-      dashboardList,
-    };
-  },
-};
+
+  // 'SET_DASHBOARD_LIST': (state, dashboardList) => {
+  //   return {
+  //     ...state,
+  //     dashboardList,
+  //   };
+  // },
+}
 
 const DashboardReducer = (state = initialState, { type, payload }) => {
-  if (mutation[type]) {
-    return mutation[type](state, payload);
+  if (mutations[type]) {
+    return mutations[type](state, payload);
   }
   return { ...state };
 };

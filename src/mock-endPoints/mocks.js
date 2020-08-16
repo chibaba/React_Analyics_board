@@ -17,8 +17,10 @@ mock
   .onGet("/api/data/device_percentage")
   .reply(200, require("./fixtures/device_percentage.json"));
 
+mock.onGet('/api/dashboard/repo_dash_config').reply(200, require('./fixtures/repo_dash_config.json'))
+
 //configuration endpoints
-mock.onGet("api/dashboard-list").reply(200, [
+mock.onGet("/api/dashboard-list").reply(200, [
   {
     path: "repo_dash_config",
     title: "Org Repository Insights",

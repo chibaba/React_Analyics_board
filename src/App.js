@@ -33,7 +33,7 @@ function App() {
       <Router>
         <Home path="/" />
         <DashboardSelector path="/analytics" axios={axios} />
-        <Dashboard path="/analytics/:dashboard" axios={axios} />
+        <Dashboard path="/analytics/:dashboardName" axios={axios} />
       </Router>
     </div>
   );
