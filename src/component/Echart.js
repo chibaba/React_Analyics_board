@@ -22,6 +22,6 @@ export default function Echart({ config, resize }) {
 
     }, [config, chartElement, resize])
     return (
-        <div ref={chart} style={{ height: '300px', width: '900px' }} />
+        <div ref={chart} style={{ height: '100%', width: '100%' }} />
     )
 }

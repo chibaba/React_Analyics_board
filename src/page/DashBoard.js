@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { useSelector, useDispatch } from "react-redux";
+import Chart from '../component/Chart'
 
 
 
@@ -33,7 +34,10 @@ export default function Dashboard({ axios, dashboardName }) {
     <section className="dashboard">{
       config && config.map((config, index) => {
         const component = require(`../component/${config.type}.js`).default;
-        return config.data ? React.createElement(component, { config: config, key: index }) : ''
+        return (<Chart config={config}> {
+          config.data ? React.createElement(component, { config: config, key: index }) : ''
+        }
+        </Chart>)
       })
     }</section>
   )

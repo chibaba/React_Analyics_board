@@ -6,7 +6,6 @@ export default function Chart({ config, children }) {
     return (
         <section style={{ height, width }}>
             {children}
-
         </section>
     )
 
